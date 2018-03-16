@@ -1,6 +1,6 @@
 {
   "name": "pqsort",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "quicksort and partial quicksort",
   "main": "dist/pqsort.min.js",
   "scripts": {
@@ -16,7 +16,8 @@
   "author": "jingbo",
   "license": "ISC",
   "repository": {
-    "type" : "git", "url" : "https://bitbucket.org/jingbo/pqsort"
+    "type": "git",
+    "url": "https://bitbucket.org/jingbo/pqsort"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
