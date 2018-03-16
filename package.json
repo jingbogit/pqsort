@@ -4,7 +4,7 @@
   "description": "quicksort and partial quicksort",
   "main": "dist/pqsort.min.js",
   "scripts": {
-    "build": "babel src/Quicksort.js --out-file dist/pqsort.min.js",
+    "build": "babel src/pqsort.js --out-file dist/pqsort.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +15,9 @@
   ],
   "author": "jingbo",
   "license": "ISC",
+  "repository": {
+    "type" : "git", "url" : "https://bitbucket.org/jingbo/pqsort"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
