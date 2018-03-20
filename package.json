@@ -7,7 +7,7 @@
     "build": "babel src/pqsort.js --out-file build/pqsort.js",
     "minify": "minify build/pqsort.js --out-file dist/pqsort.min.js",
     "test": "jest",
-    "prepublishOnly": "yarn minify && yarn test && npm version patch",
+    "prepublishOnly": "yarn build && yarn minify && yarn test && npm version patch",
     "postpublish": "git push origin master"
   },
   "keywords": [
