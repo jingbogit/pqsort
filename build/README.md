@@ -1,0 +1,1 @@
+Transpiled ES2015 code.
