@@ -1,12 +1,11 @@
 {
   "presets": [
-    ["es2015", {"modules": false}],
+    ["es2015"],
     ["env", {
       "targets": {
         "browsers": ["last 2 versions", "safari >= 7", "ie >= 8", "> 1% in CN", "> 3% in US"]
       }
-    }],
-    ["minify"]
+    }]
   ],
   "plugins": ["transform-es2015-modules-umd"]
 }
