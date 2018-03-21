@@ -6,7 +6,7 @@ var t2 = transform([5, 7, 4, 2, 8, 6, 1, 9, 0, 3])
 
 // construct object {data: index, value: value} to keep the sorted index
 function transform (arr) {
-  return arr.map((v, index) => { return {data: index, value: v} })
+  return arr.map(function (v, index) { return {value: v, data: index} })
 }
 
 test('pqsort is a function', () => {
@@ -15,8 +15,7 @@ test('pqsort is a function', () => {
 })
 
 test('sort inversed array', () => {
-  pqsort(t0, 9)
-  // expect(arr1[0]).toBe(8)
+  pqsort(t0) // sort the whole array
   expect(t0).toEqual([ { data: 8, value: 1 },
     { data: 7, value: 2 },
     { data: 6, value: 3 },
@@ -31,7 +30,6 @@ test('sort inversed array', () => {
 
 test('sort first 3 elements', () => {
   pqsort(t1, 3) // sort the 3 minimum elements, and put them at the beginning of the array
-  // expect(arr1[0]).toBe(8)
   expect(t1.slice(0, 3)).toEqual([ { data: 8, value: 0 },
     { data: 6, value: 1 },
     { data: 3, value: 2 } ]
@@ -39,8 +37,7 @@ test('sort first 3 elements', () => {
 })
 
 test('sort arbitrary array', () => {
-  pqsort(t2, 10) // sort the 3 minimum elements, and put them at the beginning of the array
-  // expect(arr1[0]).toBe(8)
+  pqsort(t2, 10)
   expect(t2).toEqual([ { data: 8, value: 0 },
     { data: 6, value: 1 },
     { data: 3, value: 2 },

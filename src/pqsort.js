@@ -57,7 +57,7 @@ function quickSort (items, left = 0, right = items.length - 1) {
  * @param {number} k - [1, items.length]
  * @returns {{value, data}[k]}
  */
-function pqsort (items, k, i = 0, j = items.length - 1) {
+function pqsort (items, k = items.length, i = 0, j = items.length - 1) {
   if (i < j) {
     let p = partition(items, i, j)
     pqsort(items, k, i, p - 1)
