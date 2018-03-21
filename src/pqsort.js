@@ -30,6 +30,7 @@ function partition (items, i, j) {
   return i
 }
 
+/*
 function quickSort (items, left = 0, right = items.length - 1) {
   var index
   if (items.length > 1) {
@@ -43,6 +44,7 @@ function quickSort (items, left = 0, right = items.length - 1) {
   }
   return items
 }
+*/
 
 /**
  * sort the k-minimum values from an array.
@@ -55,14 +57,14 @@ function quickSort (items, left = 0, right = items.length - 1) {
  * @param {number} k - [1, items.length]
  * @returns {{value, data}[k]}
  */
-function partial_quicksort (items, k, i = 0, j = items.length - 1) {
+function pqsort (items, k, i = 0, j = items.length - 1) {
   if (i < j) {
     let p = partition(items, i, j)
-    partial_quicksort(items, k, i, p - 1)
+    pqsort(items, k, i, p - 1)
     if (p < k - 1) {
-      partial_quicksort(items, k, p, j)
+      pqsort(items, k, p, j)
     }
   }
 }
 
-export {partial_quicksort, quickSort}
+export default pqsort

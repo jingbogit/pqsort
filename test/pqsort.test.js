@@ -1,8 +1,4 @@
-// const pqsort = require('../dist/pqsort.min.js')
-
-// const pqsort = require('../src/pqsort.js')
-// import { partial_quicksort } from '../src/pqsort.js'
-const {partial_quicksort} = require('../dist/pqsort.min.js')
+const pqsort = require('../dist/pqsort.min.js')
 
 var t0 = transform([9, 8, 7, 6, 5, 4, 3, 2, 1])
 var t1 = transform([5, 7, 4, 2, 8, 6, 1, 9, 0, 3])
@@ -13,8 +9,13 @@ function transform (arr) {
   return arr.map((v, index) => { return {data: index, value: v} })
 }
 
+test('pqsort is a function', () => {
+  console.log(pqsort)
+  expect(pqsort).toBeDefined()
+})
+
 test('sort inversed array', () => {
-  partial_quicksort(t0, 9)
+  pqsort(t0, 9)
   // expect(arr1[0]).toBe(8)
   expect(t0).toEqual([ { data: 8, value: 1 },
     { data: 7, value: 2 },
@@ -29,7 +30,7 @@ test('sort inversed array', () => {
 })
 
 test('sort first 3 elements', () => {
-  partial_quicksort(t1, 3) // sort the 3 minimum elements, and put them at the beginning of the array
+  pqsort(t1, 3) // sort the 3 minimum elements, and put them at the beginning of the array
   // expect(arr1[0]).toBe(8)
   expect(t1.slice(0, 3)).toEqual([ { data: 8, value: 0 },
     { data: 6, value: 1 },
@@ -38,7 +39,7 @@ test('sort first 3 elements', () => {
 })
 
 test('sort arbitrary array', () => {
-  partial_quicksort(t2, 10) // sort the 3 minimum elements, and put them at the beginning of the array
+  pqsort(t2, 10) // sort the 3 minimum elements, and put them at the beginning of the array
   // expect(arr1[0]).toBe(8)
   expect(t2).toEqual([ { data: 8, value: 0 },
     { data: 6, value: 1 },
