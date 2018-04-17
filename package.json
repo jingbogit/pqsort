@@ -8,7 +8,8 @@
     "minify": "minify build/pqsort.js --out-file dist/pqsort.min.js",
     "test": "jest",
     "prepublishOnly": "yarn build && yarn minify && yarn test",
-    "postpublish": "git push origin master"
+    "postpublish": "git push origin master && git push github master",
+    "cover": "jest --coverage"
   },
   "keywords": [
     "quick",
