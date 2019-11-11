@@ -18,7 +18,7 @@
     "quicksort"
   ],
   "author": "jingbo",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://bitbucket.org/jingbo/pqsort"
