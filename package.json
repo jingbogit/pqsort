@@ -1,6 +1,6 @@
 {
   "name": "pqsort",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "quicksort and partial quicksort",
   "main": "dist/pqsort.min.js",
   "scripts": {
